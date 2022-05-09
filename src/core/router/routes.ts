@@ -6,8 +6,8 @@ interface BaseRoutes {
 }
 
 export const baseRoutes: BaseRoutes = {
-  pokemon: '/pokemon',
-  detail: '/pokemon/:name',
+  pokemon: 'pokemon',
+  detail: 'pokemon/:name',
 };
 
 interface Routes extends Omit<BaseRoutes, 'detail'> {

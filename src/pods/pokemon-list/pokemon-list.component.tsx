@@ -19,7 +19,7 @@ const pokemonListContainer = css`
 `;
 
 
-const imageContainer = css`
+const centeredElement = css`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -35,15 +35,15 @@ const { pokemonList, onDebounce } = props;
 
     return (
         <div css={pokemonListContainer}>
-            <div css={imageContainer}>
+            <div css={centeredElement}>
                 <img css={image} src={PokemonImage} />
             </div>
-            <div css={imageContainer}>
+            <div css={centeredElement}>
                 <SearcherComponent searchHandler={onDebounce} />
             </div>
                 {
                     pokemonList.map(e =>
-                            <PokemonBoxComponent key={e.id} id={e.id} name={e.name} />
+                        <PokemonBoxComponent key={e.id} id={e.id} name={e.name} />
                     )
                 }
             
